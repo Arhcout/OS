@@ -25,4 +25,5 @@ run:
 
 clean:
 	rm -f $$(find . -name '*.o')
+	rm -rf isodir
 

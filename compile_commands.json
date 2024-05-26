@@ -1,0 +1,19 @@
+[
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/kernel.c.o",
+      "/home/me/Proj/OS/kernel/kernel.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/kernel.c",
+    "output": "/home/me/Proj/OS/kernel/kernel.c.o"
+  }
+]

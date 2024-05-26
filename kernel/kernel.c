@@ -82,17 +82,38 @@ void terminal_putentryat(char c, uint8_t color, size_t x, size_t y)
 	const size_t index = y * VGA_WIDTH + x;
 	terminal_buffer[index] = vga_entry(c, color);
 }
- 
-void terminal_putchar(char c) 
-{
-	terminal_putentryat(c, terminal_color, terminal_column, terminal_row);
-	if (++terminal_column == VGA_WIDTH) {
-		terminal_column = 0;
-		if (++terminal_row == VGA_HEIGHT)
-			terminal_row = 0;
+
+void terminal_scrol(){
+	for (size_t y = 0; y < VGA_HEIGHT+1; y++) {
+		for (size_t x = 0; x < VGA_WIDTH; x++) {
+			terminal_buffer[y * VGA_WIDTH + x] = terminal_buffer[(y+1) * VGA_WIDTH + x];
+		}
+	}
+
+	for (size_t x = 0; x < VGA_WIDTH; x++) {
+		const size_t index = (VGA_HEIGHT-1) * VGA_WIDTH + x;
+		terminal_buffer[index] = vga_entry(' ', terminal_color);
 	}
 }
  
+void terminal_putchar(char c) 
+{
+	switch (c) {
+	case '\n':
+		terminal_column = 0;
+		if (++terminal_row == VGA_HEIGHT)
+			terminal_row = 0;
+		break;
+	default:
+		terminal_putentryat(c, terminal_color, terminal_column, terminal_row);
+		if (++terminal_column == VGA_WIDTH) {
+			terminal_column = 0;
+			if (++terminal_row == VGA_HEIGHT)
+				terminal_row = 0;
+		}
+	}
+}
+
 void terminal_write(const char* data, size_t size) 
 {
 	for (size_t i = 0; i < size; i++)
@@ -106,9 +127,7 @@ void terminal_writestring(const char* data)
  
 void kernel_main(void) 
 {
-	/* Initialize terminal interface */
 	terminal_initialize();
- 
-	/* Newline support is left as an exercise. */
-	terminal_writestring("Hello, kernel World!\n");
+
+	terminal_writestring("Hello world!");
 }

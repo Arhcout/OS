@@ -1,0 +1,5 @@
+*.c.o
+*.S.o
+*.bin
+kernelobjs.txt
+*.iso
