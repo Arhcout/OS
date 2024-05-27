@@ -1,5 +1,5 @@
 *.c.o
-*.S.o
+*.s.o
 *.bin
 kernelobjs.txt
 *.iso

@@ -23,6 +23,9 @@ os:
 run:
 	qemu-system-i386 -cdrom $(NAME).iso
 
+debug:
+	qemu-system-i386 -s -S -kernel $(NAME).bin
+
 clean:
 	rm -f $$(find . -name '*.o')
 	rm -rf isodir
