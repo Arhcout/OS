@@ -1,4 +1,5 @@
 #include "../../tty.h"
+#include "../../kstring.h"
 #include <stdint.h>
 #include <stddef.h>
 #include "../../vga.h"
@@ -47,23 +48,25 @@ void terminal_scrol(){
 		const size_t index = (VGA_HEIGHT-1) * VGA_WIDTH + x;
 		terminal_buffer[index] = vga_entry(' ', terminal_color);
 	}
+
+	terminal_row = VGA_HEIGHT-1;
 }
  
 void terminal_putchar(char c) 
 {
 	switch (c) {
-	case '\n':
-		terminal_column = 0;
-		if (++terminal_row == VGA_HEIGHT)
-			terminal_row = 0;
-		break;
-	default:
-		terminal_putentryat(c, terminal_color, terminal_column, terminal_row);
-		if (++terminal_column == VGA_WIDTH) {
+		case '\n':
 			terminal_column = 0;
 			if (++terminal_row == VGA_HEIGHT)
-				terminal_row = 0;
-		}
+				terminal_scrol();
+			break;
+		default:
+			terminal_putentryat(c, terminal_color, terminal_column, terminal_row);
+			if (++terminal_column == VGA_WIDTH) {
+				terminal_column = 0;
+				if (++terminal_row == VGA_HEIGHT)
+					terminal_scrol();
+			}
 	}
 }
 

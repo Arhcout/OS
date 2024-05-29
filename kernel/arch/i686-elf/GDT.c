@@ -1,13 +1,13 @@
 #include "GDT.h"
-#include "../../kio.h"
+#include "ArchUtils.h"
 #include <stdint.h>
 
 static uint64_t GDT[6];
 
 static uint8_t TSS[0x68];
 
+// from GDT.s
 extern void setGdt(uint16_t limit, uint32_t base);
-extern void reloadSegments();
 
 void CreateTSS(){
 
@@ -26,8 +26,6 @@ void CreateTSS(){
 	// Create the low 32 bit segment
 	GDT[5] |= base  << 16;                       // set base bits 15:0
 	GDT[5] |= limit  & 0x0000FFFF;               // set limit bits 15:0
-
-	kprintf("TSS: %x", GDT[5]);
 }
 
 

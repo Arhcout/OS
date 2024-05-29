@@ -3,9 +3,26 @@
     "arguments": [
       "/home/me/opt/cross/bin/i686-elf-gcc",
       "-c",
+      "-g",
       "-std=gnu99",
       "-ffreestanding",
-      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/kstring.c.o",
+      "/home/me/Proj/OS/kernel/kstring.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/kstring.c",
+    "output": "/home/me/Proj/OS/kernel/kstring.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-std=gnu99",
+      "-ffreestanding",
       "-Wall",
       "-Wextra",
       "-o",
@@ -15,5 +32,128 @@
     "directory": "/home/me/Proj/OS/kernel",
     "file": "/home/me/Proj/OS/kernel/kernel.c",
     "output": "/home/me/Proj/OS/kernel/kernel.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/kio.c.o",
+      "/home/me/Proj/OS/kernel/kio.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/kio.c",
+    "output": "/home/me/Proj/OS/kernel/kio.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/Interrupts.c.o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/Interrupts.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/Interrupts.c",
+    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/Interrupts.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/GDT.c.o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/GDT.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/GDT.c",
+    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/GDT.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/PIC.c.o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/PIC.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/PIC.c",
+    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/PIC.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/tty.c.o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/tty.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/tty.c",
+    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/tty.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mgeneral-regs-only",
+      "-mno-red-zone",
+      "-o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/isr/KeyboardHandler.c.o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/isr/KeyboardHandler.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/isr/KeyboardHandler.c",
+    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/isr/KeyboardHandler.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mgeneral-regs-only",
+      "-mno-red-zone",
+      "-o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/isr/ExeptionHandler.c.o",
+      "/home/me/Proj/OS/kernel/arch/i686-elf/isr/ExeptionHandler.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/isr/ExeptionHandler.c",
+    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/isr/ExeptionHandler.c.o"
   }
 ]

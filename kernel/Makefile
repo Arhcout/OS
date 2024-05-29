@@ -17,7 +17,10 @@ kernel: $(CRTI_OBJ) $(CRTBEGIN_OBJ) $(CURDIR)/arch/$(TARGET)/boot.s.o $(KERNEL_O
 	@echo $^ > kernelobj.txt
 
 %.c.o: %.c
-	$(CC) -c $^ -o $@ $(KERNEL_CFLAGS)
+	if grep -q "isr" <<< "$^"; then\
+		SPECIAL_FLAGS="-mgeneral-regs-only -mno-red-zone";\
+	fi;\
+	$(CC) -c $^ -o $@ $(KERNEL_CFLAGS) $$SPECIAL_FLAGS
 
 %.s.o: %.s
 	$(AS) $^ -o $@ $(ASMFLAGS)
