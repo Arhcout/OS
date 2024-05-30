@@ -63,8 +63,8 @@ void* isrs[] = {
 	ExeptionHandler, //TODO: implement it
 	KeyboardIntHandler, // KB Interrupt handler
 	0              , // for internal use of PIC only
-	ExeptionHandler, //TODO: implement it
-	ExeptionHandler, //TODO: implement it
+	Serial2Handler , // For serial communication
+	Serial1Handler , // For serial communication
 	ExeptionHandler, //TODO: implement it
 	ExeptionHandler, //TODO: implement it
 	ExeptionHandler, //TODO: implement it
@@ -83,7 +83,9 @@ extern void setIdt(uint16_t limit, uint32_t base);
 void InitInterrupt(){
 	RemapPIC(0x20, 0x27);
 	DisablePIC(); // Mask all IRQ lines
-	ClearIRQMask(1); // Enable keyboard inturrupt
+	ClearIRQMask(1); // Enable keyboard interrupt
+	ClearIRQMask(3); // Enable Serial interrupt
+	ClearIRQMask(4); // Enable Serial interrupt
 	uint8_t vector = 0;
 	for (; vector < 32; vector++) {
 		// flags: Trap gate, DPL 0, Present

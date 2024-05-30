@@ -14,4 +14,6 @@ typedef struct{
 __attribute__((interrupt)) void ExeptionHandler(InterrupFrame* frame);
 __attribute__((interrupt)) void DivideByZeroExeptionHandler(InterrupFrame* frame);
 __attribute__((interrupt)) void KeyboardIntHandler(InterrupFrame* frame);
+__attribute__((interrupt)) void Serial2Handler(InterrupFrame* frame);
+__attribute__((interrupt)) void Serial1Handler(InterrupFrame* frame);
 #endif // ISR_H

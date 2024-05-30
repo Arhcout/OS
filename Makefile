@@ -21,10 +21,10 @@ os:
 	grub-mkrescue -o $(NAME).iso isodir
 
 run:
-	qemu-system-i386 -cdrom $(NAME).iso
+	qemu-system-i386 -cdrom $(NAME).iso -serial pty
 
 debug:
-	qemu-system-i386 -s -S -kernel $(NAME).bin &
+	qemu-system-i386 -s -S -kernel $(NAME).bin -serial pty &
 	gdb $(NAME).bin
 
 clean:
