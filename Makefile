@@ -10,7 +10,7 @@ os:
 	OBJS=$$(cat kernel/kernelobj.txt);\
 	echo $$OBJS;\
 	$(CC) -T kernel/arch/$(TARGET)/linker.ld -o $(NAME).bin -ffreestanding -O2 -nostdlib $$OBJS -lgcc
-	if grub-file --is-x86-multiboot MyOs.bin; then\
+	if grub-file --is-x86-multiboot2 MyOs.bin; then\
  		echo multiboot confirmed;\
 	else\
   	echo the file is not multiboot;\
