@@ -11,6 +11,7 @@ void QueueRead(uint32_t port);
 void UpdateSerial(uint32_t port);
 char ReadSerial(uint32_t port);
 void WriteSerial(uint32_t port, char a);
+void WriteStringToSerial(uint32_t port, const char* str);
 int InitDebugSerial(uint32_t port);
 
 #endif // SERIAL_H

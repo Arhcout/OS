@@ -2,6 +2,7 @@
 #include "kio.h"
 #include <stdbool.h>
 #include <stdint.h>
+#include "kstring.h"
 
 #define COM1 0x3F8
 #define COM2 0x2F8
@@ -10,11 +11,17 @@
 
 #define DEBUG_DIVISOR 3
 
+#define BUFFER_SIZE 64
+
 typedef struct{
 	uint8_t com1;
+	char buf1[BUFFER_SIZE];
 	uint8_t com2;
+	char buf2[BUFFER_SIZE];
 	uint8_t com3;
+	char buf3[BUFFER_SIZE];
 	uint8_t com4;
+	char buf4[BUFFER_SIZE];
 }COMQueue;
 static COMQueue _bytesToRead;
 
@@ -77,7 +84,20 @@ static int _IsTransmitEmpty(uint32_t port) {
 void WriteSerial(uint32_t port, char a) {
    while (_IsTransmitEmpty(port) == 0);
  
-   outb(port,a);
+	 outb(port,a);
+
+}
+
+void WriteStringToSerial(uint32_t port, const char* str){
+	for (size_t i = 0; i < strlen(str); i++) {
+		switch (str[i]) {
+			case '\n':
+				WriteStringToSerial(port, "\033[1E");
+				break;
+			default:
+				WriteSerial(port, str[i]);
+		}
+	}
 }
 
 int InitDebugSerial(uint32_t port){

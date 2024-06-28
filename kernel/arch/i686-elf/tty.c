@@ -60,6 +60,15 @@ void terminal_putchar(char c)
 			if (++terminal_row == VGA_HEIGHT)
 				terminal_scrol();
 			break;
+		case '\t':
+			terminal_column = ((terminal_column/8)+1)*8;
+			if (++terminal_column == VGA_WIDTH) {
+				terminal_column = 0;
+				if (++terminal_row == VGA_HEIGHT)
+					terminal_scrol();
+			}
+			break;
+
 		default:
 			terminal_putentryat(c, terminal_color, terminal_column, terminal_row);
 			if (++terminal_column == VGA_WIDTH) {

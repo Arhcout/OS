@@ -24,7 +24,7 @@ run:
 	qemu-system-i386 -cdrom $(NAME).iso -serial pty
 
 debug:
-	qemu-system-i386 -s -S -kernel $(NAME).bin -serial pty &
+	qemu-system-i386 -s -S -cdrom $(NAME).iso -serial pty &
 	gdb $(NAME).bin
 
 clean:

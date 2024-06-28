@@ -27,39 +27,40 @@ static void IDTSetDescriptor(uint8_t vector, void* isr, uint8_t flags) {
 }
 
 void* isrs[] = {
-	DivideByZeroExeptionHandler, // Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	ExeptionHandler, //TODO: Implement it! Protected Mode Exceptions (Reserved by Intel) 
-	
+	// Protected Mode Exceptions (Reserved by Intel) 
+	DivideByZeroExeptionHandler,
+	ExeptionHandler,
+	NMIHandler,
+	ExeptionHandler,
+	OverflowHandler,
+	BoundRangeExeededHandler,
+	InvalidOpcodeHandler,
+	DeviceNotAvailableHandler,
+	DoubleFaultHandler,
+	ExeptionHandler,
+	InvalidTSSHandler,
+	SegmentNotPresentHandler,
+	StackSegmentFaultHandler,
+	GeneralProtectionFaultHandler,
+	PageFaultHandler,
+	ExeptionHandler,
+	x87FloatingPointExceptionHandler,
+	AlignmentCheckHandler,
+	MachinCheckHandler,
+	SIMDFloatingPointExceptionHandler,
+	VirtualizationExceptionHandler,
+	ControlProtectionFaultHandler,
+	ExeptionHandler, // Reserved
+	ExeptionHandler, // Reserved
+	ExeptionHandler, // Reserved
+	ExeptionHandler, // Reserved
+	ExeptionHandler, // Reserved
+	ExeptionHandler, // Reserved
+	HypervisorInjectionExeptionHandler,
+	VMMCommunicationExeptionHandler,
+	SecurityExeptionHandler,
+	ExeptionHandler, // Reserved
+
 	ExeptionHandler, //TODO: implement it
 	KeyboardIntHandler, // KB Interrupt handler
 	0              , // for internal use of PIC only

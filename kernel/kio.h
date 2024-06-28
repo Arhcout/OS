@@ -2,6 +2,7 @@
 #define KIO_H
 #include <stdarg.h>
 #include <stdint.h>
+#include <stddef.h>
 
 #if defined (__i386__)
 
@@ -35,5 +36,6 @@ static inline void io_wait()
 
 void kprint(const char* str);
 void kprintf(const char* fmt, ...);
+void kvprintf(const char* fmt, char* dest, size_t n, va_list list);
 
 #endif // KIO_H

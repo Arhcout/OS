@@ -27,7 +27,12 @@ stack_top:
 .type _start, @function
 _start:
 	mov $stack_top, %esp
+
+	call _init
+
 	call kernel_main
+
+	call _fini
 
 	cli
 1:	hlt
