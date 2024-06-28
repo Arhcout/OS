@@ -3,4 +3,4 @@
 *.bin
 kernelobjs.txt
 *.iso
-.cache
+*.idx
