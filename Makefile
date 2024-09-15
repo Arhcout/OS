@@ -20,11 +20,11 @@ os:
 	cp grub.cfg isodir/boot/grub/grub.cfg
 	grub-mkrescue -o $(NAME).iso isodir
 
-run:
-	qemu-system-i386 -cdrom $(NAME).iso -serial pty
+run: os
+	qemu-system-i386 -cdrom $(NAME).iso -serial pty & putty
 
-debug:
-	qemu-system-i386 -s -S -cdrom $(NAME).iso -serial pty &
+debug: os
+	qemu-system-i386 -s -S -cdrom $(NAME).iso -serial pty & putty &
 	gdb $(NAME).bin
 
 clean:

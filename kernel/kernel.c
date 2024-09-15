@@ -1,27 +1,27 @@
-#include <stdbool.h>
-#include <stddef.h>
-#include <stdint.h>
 #include "Interrupts.h"
 #include "Serial.h"
 #include "arch/i686-elf/GDT.h"
 #include "arch/i686-elf/Paging.h"
-#include "tty.h"
 #include "kio.h"
+#include "tty.h"
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
 
-void kernel_main(void) 
-{
-	terminal_initialize();
-	InitGDT();
-	InitInterrupt();
-	InitPaging();
+extern uint32_t kernelEnd;
 
-	InitDebugSerial(COM1);
+void kernel_main(void) {
+  terminal_initialize();
+  InitGDT();
+  InitInterrupt();
+  kSprintf(COM1, "kernelEnd: 0x%x\n", &kernelEnd);
+  InitPaging();
 
-	kprintf("%llx\n", 0xdeadbeef12345678);
+  InitDebugSerial(COM1);
 
-	WriteStringToSerial(COM1, "Hello serial!\n");
+  kprintf("%llx\n", 0xdeadbeef12345678);
 
-	for(;;) {
-		UpdateSerial(COM1);
-	}
+  for (;;) {
+    UpdateSerial(COM1);
+  }
 }
