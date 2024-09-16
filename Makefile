@@ -8,8 +8,7 @@ os:
 	$(MAKE) -C kernel kernel
 	#$(MAKE) -C libc
 	OBJS=$$(cat kernel/kernelobj.txt);\
-	echo $$OBJS;\
-	$(CC) -T kernel/arch/$(TARGET)/linker.ld -o $(NAME).bin -ffreestanding -O2 -nostdlib $$OBJS -lgcc
+	$(CC) -T kernel/linker.ld -o $(NAME).bin -ffreestanding -g -nostdlib $$OBJS -lgcc
 	if grub-file --is-x86-multiboot2 MyOs.bin; then\
  		echo multiboot confirmed;\
 	else\

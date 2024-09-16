@@ -1,4 +1,4 @@
-
+.section .boot_text
 .global reloadSegments
 reloadSegments:
    // Reload CS register containing code selector:

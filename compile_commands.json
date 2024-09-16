@@ -4,6 +4,43 @@
       "/home/me/opt/cross/bin/i686-elf-gcc",
       "-c",
       "-g",
+      "-I/home/me/Proj/OS/kernel",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/Serial.c.o",
+      "/home/me/Proj/OS/kernel/Serial.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/Serial.c",
+    "output": "/home/me/Proj/OS/kernel/Serial.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-I/home/me/Proj/OS/kernel",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/Interrupts.c.o",
+      "/home/me/Proj/OS/kernel/Interrupts.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/Interrupts.c",
+    "output": "/home/me/Proj/OS/kernel/Interrupts.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-I/home/me/Proj/OS/kernel",
       "-std=gnu99",
       "-ffreestanding",
       "-Wall",
@@ -21,6 +58,61 @@
       "/home/me/opt/cross/bin/i686-elf-gcc",
       "-c",
       "-g",
+      "-I/home/me/Proj/OS/kernel",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/early/EarlyPaging.c.o",
+      "/home/me/Proj/OS/kernel/early/EarlyPaging.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/early/EarlyPaging.c",
+    "output": "/home/me/Proj/OS/kernel/early/EarlyPaging.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-I/home/me/Proj/OS/kernel",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/early/EarlyGDT.c.o",
+      "/home/me/Proj/OS/kernel/early/EarlyGDT.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/early/EarlyGDT.c",
+    "output": "/home/me/Proj/OS/kernel/early/EarlyGDT.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-I/home/me/Proj/OS/kernel",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/early/EarlyKernel.c.o",
+      "/home/me/Proj/OS/kernel/early/EarlyKernel.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/early/EarlyKernel.c",
+    "output": "/home/me/Proj/OS/kernel/early/EarlyKernel.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-I/home/me/Proj/OS/kernel",
       "-std=gnu99",
       "-ffreestanding",
       "-Wall",
@@ -38,6 +130,25 @@
       "/home/me/opt/cross/bin/i686-elf-gcc",
       "-c",
       "-g",
+      "-I/home/me/Proj/OS/kernel",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-o",
+      "/home/me/Proj/OS/kernel/GDT.c.o",
+      "/home/me/Proj/OS/kernel/GDT.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/GDT.c",
+    "output": "/home/me/Proj/OS/kernel/GDT.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-I/home/me/Proj/OS/kernel",
       "-std=gnu99",
       "-ffreestanding",
       "-Wall",
@@ -55,74 +166,61 @@
       "/home/me/opt/cross/bin/i686-elf-gcc",
       "-c",
       "-g",
+      "-I/home/me/Proj/OS/kernel",
       "-std=gnu99",
       "-ffreestanding",
       "-Wall",
       "-Wextra",
       "-o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/Interrupts.c.o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/Interrupts.c"
+      "/home/me/Proj/OS/kernel/PIC.c.o",
+      "/home/me/Proj/OS/kernel/PIC.c"
     ],
     "directory": "/home/me/Proj/OS/kernel",
-    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/Interrupts.c",
-    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/Interrupts.c.o"
+    "file": "/home/me/Proj/OS/kernel/PIC.c",
+    "output": "/home/me/Proj/OS/kernel/PIC.c.o"
   },
   {
     "arguments": [
       "/home/me/opt/cross/bin/i686-elf-gcc",
       "-c",
       "-g",
+      "-I/home/me/Proj/OS/kernel",
       "-std=gnu99",
       "-ffreestanding",
       "-Wall",
       "-Wextra",
       "-o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/GDT.c.o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/GDT.c"
+      "/home/me/Proj/OS/kernel/tty.c.o",
+      "/home/me/Proj/OS/kernel/tty.c"
     ],
     "directory": "/home/me/Proj/OS/kernel",
-    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/GDT.c",
-    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/GDT.c.o"
+    "file": "/home/me/Proj/OS/kernel/tty.c",
+    "output": "/home/me/Proj/OS/kernel/tty.c.o"
   },
   {
     "arguments": [
       "/home/me/opt/cross/bin/i686-elf-gcc",
       "-c",
       "-g",
+      "-I/home/me/Proj/OS/kernel",
       "-std=gnu99",
       "-ffreestanding",
       "-Wall",
       "-Wextra",
       "-o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/PIC.c.o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/PIC.c"
+      "/home/me/Proj/OS/kernel/Paging.c.o",
+      "/home/me/Proj/OS/kernel/Paging.c"
     ],
     "directory": "/home/me/Proj/OS/kernel",
-    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/PIC.c",
-    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/PIC.c.o"
+    "file": "/home/me/Proj/OS/kernel/Paging.c",
+    "output": "/home/me/Proj/OS/kernel/Paging.c.o"
   },
   {
     "arguments": [
       "/home/me/opt/cross/bin/i686-elf-gcc",
       "-c",
       "-g",
-      "-std=gnu99",
-      "-ffreestanding",
-      "-Wall",
-      "-Wextra",
-      "-o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/tty.c.o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/tty.c"
-    ],
-    "directory": "/home/me/Proj/OS/kernel",
-    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/tty.c",
-    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/tty.c.o"
-  },
-  {
-    "arguments": [
-      "/home/me/opt/cross/bin/i686-elf-gcc",
-      "-c",
-      "-g",
+      "-I/home/me/Proj/OS/kernel",
       "-std=gnu99",
       "-ffreestanding",
       "-Wall",
@@ -130,18 +228,19 @@
       "-mgeneral-regs-only",
       "-mno-red-zone",
       "-o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/isr/KeyboardHandler.c.o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/isr/KeyboardHandler.c"
+      "/home/me/Proj/OS/kernel/isr/KeyboardHandler.c.o",
+      "/home/me/Proj/OS/kernel/isr/KeyboardHandler.c"
     ],
     "directory": "/home/me/Proj/OS/kernel",
-    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/isr/KeyboardHandler.c",
-    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/isr/KeyboardHandler.c.o"
+    "file": "/home/me/Proj/OS/kernel/isr/KeyboardHandler.c",
+    "output": "/home/me/Proj/OS/kernel/isr/KeyboardHandler.c.o"
   },
   {
     "arguments": [
       "/home/me/opt/cross/bin/i686-elf-gcc",
       "-c",
       "-g",
+      "-I/home/me/Proj/OS/kernel",
       "-std=gnu99",
       "-ffreestanding",
       "-Wall",
@@ -149,11 +248,31 @@
       "-mgeneral-regs-only",
       "-mno-red-zone",
       "-o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/isr/ExeptionHandler.c.o",
-      "/home/me/Proj/OS/kernel/arch/i686-elf/isr/ExeptionHandler.c"
+      "/home/me/Proj/OS/kernel/isr/ExeptionHandler.c.o",
+      "/home/me/Proj/OS/kernel/isr/ExeptionHandler.c"
     ],
     "directory": "/home/me/Proj/OS/kernel",
-    "file": "/home/me/Proj/OS/kernel/arch/i686-elf/isr/ExeptionHandler.c",
-    "output": "/home/me/Proj/OS/kernel/arch/i686-elf/isr/ExeptionHandler.c.o"
+    "file": "/home/me/Proj/OS/kernel/isr/ExeptionHandler.c",
+    "output": "/home/me/Proj/OS/kernel/isr/ExeptionHandler.c.o"
+  },
+  {
+    "arguments": [
+      "/home/me/opt/cross/bin/i686-elf-gcc",
+      "-c",
+      "-g",
+      "-I/home/me/Proj/OS/kernel",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-mgeneral-regs-only",
+      "-mno-red-zone",
+      "-o",
+      "/home/me/Proj/OS/kernel/isr/SerialHandler.c.o",
+      "/home/me/Proj/OS/kernel/isr/SerialHandler.c"
+    ],
+    "directory": "/home/me/Proj/OS/kernel",
+    "file": "/home/me/Proj/OS/kernel/isr/SerialHandler.c",
+    "output": "/home/me/Proj/OS/kernel/isr/SerialHandler.c.o"
   }
 ]

@@ -4,7 +4,7 @@ CC=/home/me/opt/cross/bin/$(TARGET)-gcc
 AS=/home/me/opt/cross/bin/$(TARGET)-as
 AR=/home/me/opt/cross/bin/$(TARGET)-ar
 
-KERNEL_CFLAGS=-g -std=gnu99 -nostdlib -ffreestanding -Wall -Wextra
+KERNEL_CFLAGS=-g -I$(CURDIR) -std=gnu99 -nostdlib -ffreestanding -Wall -Wextra
 ASMFLAGS=-g
 
 NAME=MyOs
